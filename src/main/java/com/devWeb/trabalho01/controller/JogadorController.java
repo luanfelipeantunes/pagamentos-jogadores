@@ -24,7 +24,7 @@ public class JogadorController {
         return jogadorRepository.findAll();
     }
 
-    //Retorna um jogador pelo código
+    //Retorna um jogador pelo código único
     @GetMapping("/{codJogador}")
     public Jogador buscaJogador(@PathVariable Integer codJogador){
         Jogador jogador = jogadorRepository.findById(codJogador).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND));
