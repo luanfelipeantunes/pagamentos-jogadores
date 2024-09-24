@@ -17,7 +17,7 @@ public class Pagamento {
     private Integer mes;
 
     @Column
-    private Float valor;
+    private Double valor;
 
     @ManyToOne
     @JoinColumn(name = "codJogador", nullable = false)
@@ -47,11 +47,11 @@ public class Pagamento {
         this.mes = mes;
     }
 
-    public Float getValor() {
+    public Double getValor() {
         return valor;
     }
 
-    public void setValor(Float valor) {
+    public void setValor(Double valor) {
         this.valor = valor;
     }
 

@@ -1,8 +1,9 @@
 package com.devWeb.trabalho01.model;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "jogador")
@@ -14,13 +15,16 @@ public class Jogador {
     private Integer codJogador;
 
     @Column
+    @NotBlank(message = "Nome é obrigatório")
     private String nome;
 
     @Column
+    @NotBlank(message = "Email é obrigatório")
     private String email;
 
     @Column
-    private Date dataNasc;
+    @NotBlank(message = "Data de nascimento é obrigatória")
+    private LocalDate dataNasc;
 
     public Integer getCodJogador() {
         return codJogador;
@@ -46,11 +50,11 @@ public class Jogador {
         this.email = email;
     }
 
-    public Date getDataNasc() {
+    public LocalDate getDataNasc() {
         return dataNasc;
     }
 
-    public void setDataNasc(Date dataNasc) {
+    public void setDataNasc(LocalDate dataNasc) {
         this.dataNasc = dataNasc;
     }
 }
