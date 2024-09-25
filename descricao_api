@@ -1,0 +1,61 @@
+DOCUMENTAÇÃO API
+
+-----------------------------------------------
+
+*JOGADORES*
+
+- Criação de Novo Jogador
+Método HTTP: POST
+URL: http://127.0.0.1:8081/jogador
+Body:
+    nome,
+    email,
+    dataNasc (formato yyyy-mm-dd)
+
+- Busca de um jogador específico
+Método HTTP: GET
+URL: http://127.0.0.1:8081/jogador/:codJogador
+
+
+- Listagem de todos os jogadores
+Método HTTP: GET
+URL: http://127.0.0.1:8081/jogador
+
+- Atualização de Jogador
+Método HTTP: PUT
+URL: http://127.0.0.1:8081/jogador/:codJogador
+Body:
+    nome,
+    email,
+    dataNasc (formato yyyy-mm-dd)
+
+- Exclusão física de um jogador
+Método HTTP: DELETE
+URL: http://127.0.0.1:8081/jogador/:codJogador
+
+-----------------------------------------------
+
+*PAGAMENTOS*
+
+- Criação de Novo Pagamento
+Método HTTP: POST
+URL: http://127.0.0.1:8081/pagamento
+Body:
+    ano,
+    mes,
+    valor (formato 12.34)
+    codJogador - (Código do jogador vinculado ao pagamento)
+
+- Listagem de Pagamentos
+Método HTTP: GET
+URL: http://127.0.0.1:8081/pagamento
+
+- Busca um pagamento específico
+Método HTTP: GET
+URL: http://127.0.0.1:8081/pagamento/:codPagamento
+
+- Atualização de um pagamento
+Método HTTP: PUT
+URL: http://127.0.0.1:8081/pagamento/:codPagamento
+
+

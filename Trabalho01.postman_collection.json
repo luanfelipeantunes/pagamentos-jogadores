@@ -1,0 +1,243 @@
+{
+	"info": {
+		"_postman_id": "b66ee893-723b-403b-8185-f03a8716f074",
+		"name": "Trabalho01",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29930358"
+	},
+	"item": [
+		{
+			"name": "Jogadores",
+			"item": [
+				{
+					"name": "getJogador",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/jogador/3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"jogador",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listaJogadores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/jogador",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"jogador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "criaJogador",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Jogador 6\",\r\n    \"email\": \"jogador6@email.com\",\r\n    \"dataNasc\": \"2000-01-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/jogador",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"jogador"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizaJogador",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Jogador 2 editado\",\r\n    \"email\": \"jogador2@email.com\",\r\n    \"dataNasc\": \"2000-02-02\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/jogador/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"jogador",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletaJogador",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/jogador/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"jogador",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pagamentos",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pagamento",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pagamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/pagamento/1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pagamento",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ano\": 2024,\r\n    \"mes\": 9,\r\n    \"valor\": 10.50,\r\n    \"codJogador\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pagamento",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pagamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ano\": 2024,\r\n    \"mes\": 9,\r\n    \"valor\": 20.50,\r\n    \"codJogador\": 9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/pagamento/4",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"pagamento",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8081",
+			"type": "string"
+		}
+	]
+}
